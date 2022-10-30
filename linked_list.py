@@ -83,6 +83,10 @@ class LinkedList:
         return length
 
     def insert(self, afterNode, newNode):
+        if self.len() == 0:
+            self.head = newNode
+            self.tail = newNode
+            return 
         node = self.head
         if afterNode is None:
             newNode.next = node.next
@@ -96,4 +100,3 @@ class LinkedList:
                     self.tail = newNode
                     break
                 node = node.next
-
