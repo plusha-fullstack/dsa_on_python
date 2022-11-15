@@ -53,18 +53,3 @@ class DynArray:
         self.count = self.count - 1
         self.array = new_array
 
-
-
-da = DynArray()
-for i in range(5):
-    da.append(i)
-    print(da[i])
-
-da.insert(2, 101)
-print("__________")
-for i in range(da.__len__()):
-    print(da[i])
-print("__________")
-da.delete(2)
-for i in range(da.__len__()):
-    print(da[i])
