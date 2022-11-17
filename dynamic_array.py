@@ -51,7 +51,7 @@ class DynArray:
         if self.count == 0:
             return
         new_array = DynArray()
-        if self.count < self.capacity // 2 and self.capacity // 1.5 >= 16:
+        if self.count <= self.capacity // 2 and self.capacity // 1.5 >= 16:
             new_array.resize(int(self.capacity // 1.5))
         else:
             new_array.resize(self.capacity)
